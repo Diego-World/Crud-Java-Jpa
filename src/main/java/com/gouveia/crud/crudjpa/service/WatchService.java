@@ -5,6 +5,8 @@ import com.gouveia.crud.crudjpa.repository.WatchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class WatchService {
     @Autowired
@@ -20,4 +22,7 @@ public class WatchService {
         return "Product save sucessfully";
     }
 
+    public Optional<Watch> findWatchById(Long id) {
+        return watchRepository.findById(id);
+    }
 }
