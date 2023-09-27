@@ -11,13 +11,13 @@ public class WatchService {
     WatchRepository watchRepository;
 
     //CREATE, READ, UPDATE AND DELETE
-    String postWatch(Watch watch){
+    public String postWatch(Watch watch){
         Watch w = new Watch();
         w.setBrand(watch.getBrand());
         w.setPrice(watch.getPrice());
         w.setProductName(watch.getProductName());
-        watchRepository.save(w.getId());
-        return "Product save sucessfuly";
+        watchRepository.save(w);
+        return "Product save sucessfully";
     }
 
 }
